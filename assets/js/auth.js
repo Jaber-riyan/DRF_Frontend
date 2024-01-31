@@ -1,5 +1,5 @@
-// export let isAuthenticated = false;
-// const PI = 3.14;
+// let isAuthenticated = false;
+// // const PI = 3.14;
 
 // function updateNavbar() {
 //     const addPostLink = document.getElementById('add-post-link');
@@ -7,15 +7,13 @@
 //     const loginLink = document.getElementById('login-link');
 //     const logoutLink = document.getElementById('logout-link');
 
-//     if (isAuthenticated) 
-//     {
+//     if (isAuthenticated) {
 //         addPostLink.style.display = 'block';
 //         signupLink.style.display = 'none';
 //         loginLink.style.display = 'none';
 //         logoutLink.style.display = 'block';
-//     } 
-//     else 
-//     {
+//     }
+//     else {
 //         addPostLink.style.display = 'none';
 //         signupLink.style.display = 'block';
 //         loginLink.style.display = 'block';
@@ -23,7 +21,7 @@
 //     }
 // }
 
-// updateNavbar();
+
 
 
 
@@ -85,6 +83,10 @@ const handleLogin = (event) => {
     const password = getValue("login-password");
     console.log(username, password);
     if ((username, password)) {
+
+
+        
+
         fetch("https://my-blog-1772.onrender.com/user/login/", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -98,7 +100,7 @@ const handleLogin = (event) => {
                     localStorage.setItem("token", data.token);
                     localStorage.setItem("user_id", data.user_id);
                     alert("Login Successfully")
-                    window.location.href = "profile.html";
+                    window.location.href = "index2.html";
                 }
             });
     }

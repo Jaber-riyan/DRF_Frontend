@@ -4,6 +4,12 @@ const loadPost = () => {
     .then((data) => displayPost(data))
     .catch((err) => console.log(err));
 };
+const loadPost2 = () => {
+  fetch("https://my-blog-1772.onrender.com/post/list/")
+    .then((res) => res.json())
+    .then((data) => displayPost2(data))
+    .catch((err) => console.log(err));
+};
 
 const displayPost = (posts) => {
   console.log(posts);
@@ -12,7 +18,6 @@ const displayPost = (posts) => {
   {
     coutn=coutn+1;
   })
-  console.log(coutn);
   document.getElementById('total_post').innerHTML=`
     <h1>Total ${coutn} Posts</h1>
   `
@@ -25,7 +30,34 @@ const displayPost = (posts) => {
         <small> Created Time : ${post.created_on}</small>
         <a href="#" class="image featured"><img src="${post.post_image}" alt="" /></a>
         <h3><a href="#">${post.caption}</a></h3>
-        <p><b>${post.body.slice(0, 200)} </b><a style="font-weight:bold" href="left-sidebar.html?post_id=${post.id}"><b>see more....</b></a></p>
+        <p><b>${post.body.slice(0, 200)} </b><a style="font-weight:bold" href="view_detail.html?post_id=${post.id}"><b>see more....</b></a></p>
+      </section>
+      </div>
+    `;
+    parent.appendChild(div);
+  });
+};
+
+const displayPost2 = (posts) => {
+  console.log(posts);
+  let coutn = 0;
+  posts.forEach((post) =>
+  {
+    coutn=coutn+1;
+  })
+  document.getElementById('total_postt').innerHTML=`
+    <h1>Total ${coutn} Posts</h1>
+  `
+  posts.forEach((post) => {
+    const parent = document.getElementById("all-postt");
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <div class="col-4 col-12-medium">
+      <section class="highlight">
+        <small> Created Time : ${post.created_on}</small>
+        <a href="#" class="image featured"><img src="${post.post_image}" alt="" /></a>
+        <h3><a href="#">${post.caption}</a></h3>
+        <p><b>${post.body.slice(0, 200)} </b><a style="font-weight:bold" href="view_detail2.html?post_id=${post.id}"><b>see more....</b></a></p>
       </section>
       </div>
     `;
@@ -63,7 +95,7 @@ const add_post = (event) => {
   });
 
   alert("Post Add Successfully");
-  window.location.href = "index.html";
+  window.location.href = "index2.html";
 };
 
 
@@ -86,3 +118,4 @@ const profileHandle = () =>
 profileHandle()
 
 loadPost();
+loadPost2();
