@@ -98,7 +98,7 @@ const handleLogin = (event) => {
                     localStorage.setItem("token", data.token);
                     localStorage.setItem("user_id", data.user_id);
                     alert("Login Successfully")
-                    window.location.href = "index.html";
+                    window.location.href = "profile.html";
                 }
             });
     }

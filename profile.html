@@ -14,6 +14,11 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="images/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="..."
+    />
   </head>
   <body class="homepage is-preload">
     <div id="page-wrapper">
@@ -34,18 +39,13 @@
             <li id="signup-link"><a href="sign_up.html">Sign Up</a></li>
             <li id="login-link"><a href="./login.html">Login</a></li>
             <li id="login-link"><a href="./profile.html">Profile</a></li>
-            <li id="logout-link"><a onclick="handlelogOu()" href="#">Log Out</a></li>
+            <li id="logout-link"><a onclick="handlelogOut()" href="#">Log Out</a></li>
           </ul>
         </nav>
       </section>
 
       <!-- Highlights -->
-      <section id="highlights" class="wrapper style3">
-        <div class="title">All Blog</div>
-        <div class="container">
-          <div id="all-post" class="row aln-center"></div>
-        </div>
-      </section>
+      <div class=" text-center border-primary border fw-bold fs-2" id="profile-detail"></div>
 
       <!-- Footer -->
       <section id="footer" class="wrapper">

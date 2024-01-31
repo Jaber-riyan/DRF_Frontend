@@ -67,4 +67,22 @@ const add_post = (event) => {
 };
 
 
+const profileHandle = () =>
+{
+  const parent = document.getElementById('profile-detail')
+  const user_id = localStorage.getItem('user_id');
+  fetch(`https://my-blog-1772.onrender.com/user/list/${user_id}/`)
+   .then(res=>res.json())
+   .then(data=>{
+    parent.innerHTML = `
+      <h1>Username : ${data.username}</h1>
+      <h1>First Name : ${data.first_name}</h1>
+      <h1>Last Name : ${data.last_name}</h1>
+      <h1>Email : ${data.email}</h1>
+    `
+   })
+}
+
+profileHandle()
+
 loadPost();
