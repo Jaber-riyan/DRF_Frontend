@@ -20,7 +20,7 @@ const postDetail = (post) => {
             <p>Created Time : ${post.created_on} </p>
             <h2> ${post.caption} </h2>
         </header>
-        <a href="#" class="image featured">
+        <a href="#" class="image featuredd">
             <img src=" ${post.post_image} " alt="" />
         </a>
         <p>${post.body}</p>

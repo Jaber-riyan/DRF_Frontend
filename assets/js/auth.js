@@ -1,3 +1,32 @@
+// export let isAuthenticated = false;
+// const PI = 3.14;
+
+// function updateNavbar() {
+//     const addPostLink = document.getElementById('add-post-link');
+//     const signupLink = document.getElementById('signup-link');
+//     const loginLink = document.getElementById('login-link');
+//     const logoutLink = document.getElementById('logout-link');
+
+//     if (isAuthenticated) 
+//     {
+//         addPostLink.style.display = 'block';
+//         signupLink.style.display = 'none';
+//         loginLink.style.display = 'none';
+//         logoutLink.style.display = 'block';
+//     } 
+//     else 
+//     {
+//         addPostLink.style.display = 'none';
+//         signupLink.style.display = 'block';
+//         loginLink.style.display = 'block';
+//         logoutLink.style.display = 'none';
+//     }
+// }
+
+// updateNavbar();
+
+
+
 const handleRegistration = (event) => {
     event.preventDefault();
     const username = getValue("username");
@@ -31,8 +60,8 @@ const handleRegistration = (event) => {
             })
                 .then((res) => res.json())
                 .then((data) => console.log(data));
-                alert("Check your mail for confirmation")
-                window.location.href = "login.html";
+            alert("Check your mail for confirmation")
+            window.location.href = "login.html";
 
         } else {
             document.getElementById("error").innerText =
