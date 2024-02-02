@@ -2,17 +2,14 @@ const loadPost = () => {
   fetch("https://my-blog-1772.onrender.com/post/list/")
     .then((res) => res.json())
     .then((data) => displayPost(data))
-    .catch((err) => console.log(err));
 };
 const loadPost2 = () => {
   fetch("https://my-blog-1772.onrender.com/post/list/")
     .then((res) => res.json())
     .then((data) => displayPost2(data))
-    .catch((err) => console.log(err));
 };
 
 const displayPost = (posts) => {
-  console.log(posts);
   let coutn = 0;
   posts.forEach((post) =>
   {
@@ -39,7 +36,6 @@ const displayPost = (posts) => {
 };
 
 const displayPost2 = (posts) => {
-  console.log(posts);
   let coutn = 0;
   posts.forEach((post) =>
   {
